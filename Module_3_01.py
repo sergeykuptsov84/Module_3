@@ -6,13 +6,14 @@ def count_calls():
     return calls
 
 
-def string_info(up_, down_, str_):
-    a = up_.upper()
-    b = down_.lower()
-    c = len(str_)
+def string_info(z):
+    while len(z):
+        a = z.upper()
+        b = z.lower()
+        c = len(z)
 
-    count_calls()
-    return c, a, b
+        count_calls()
+        return c, a, b
 
 
 def  is_contains(string, list_to_search):
@@ -27,14 +28,9 @@ def  is_contains(string, list_to_search):
     return i
 
 
-g = string_info('Capybara', 'Capybara', 'Capybara')
-print(g)
-k = string_info('Armageddon', 'Armageddon', 'Armageddon')
-print(k)
-n = is_contains('Urban', ['Urban', 'BaNaN', 'urBAN'])
-print(n)
-m = is_contains('cycle', ['recycling', 'cyclic',])
-print(m)
+print(string_info('Capybara'))
+print(string_info('Armageddon'))
+print(is_contains('Urban', ['Urban', 'BaNaN', 'urBAN']))
+print(is_contains('cycle', ['recycling', 'cyclic',]))
 print(calls)
-
 
